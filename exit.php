@@ -1,8 +1,7 @@
 <?php
-unset($_COOKIE['user_id']);
-unset($_COOKIE['username']);
-setcookie('user_id', '', -1, '/');
-setcookie('username', '', -1, '/');
+session_start();
+session_unset();
+session_destroy();
 $home_url = 'http://' . $_SERVER['HTTP_HOST'];
- header('Location: ' . $home_url);
+header('Location: ' . $home_url);
 ?> 

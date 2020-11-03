@@ -110,10 +110,5 @@ foreach ($data as $word) {
     }
 }
 
-echo '<pre>';
-print 'start GLOSSARY ----';
-echo '<br>';
-print_r($glossary);
-echo '<br>';
-print 'end ----';
-echo '</pre>';
+$_SESSION['glossary'] = $glossary;
+header("Location: interface_glossary.php");

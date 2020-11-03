@@ -14,7 +14,7 @@ session_start();
         <div class="header">
             <form class="form" action="search_word_glossary.php" method="POST">
                 <div class="search-box">
-                    <span style="color: darkgray; font-size: 25px;">Чтобы число попало в глоссарий,оно должно встретиться в тексте:</span>
+                    <span style="color: darkgray; font-size: 25px;">Чтобы слово попало в глоссарий,оно должно встретиться в тексте:</span>
                     <br>
                     <br>
                     <input style="width: 200px" type="text" placeholder="Введите сюда это число" name="number">

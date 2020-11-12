@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `company`
+--
+
+DROP TABLE IF EXISTS `company`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company` (
+  `company_id` int(11) NOT NULL,
+  `company_name` text NOT NULL,
+  `company_email` text NOT NULL,
+  `company_phone` text NOT NULL,
+  `company_age` text NOT NULL,
+  `company_info` mediumtext NOT NULL,
+  PRIMARY KEY (`company_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company`
+--
+
+LOCK TABLES `company` WRITE;
+/*!40000 ALTER TABLE `company` DISABLE KEYS */;
+INSERT INTO `company` VALUES (0,'ООО \"Максимус\"','maxim-maximov@yandex.ru','+79667447110','2 года','Долголетие,100 тысяч довольных клиентов и сервис'),(1,'ООО \"Дальний полет\"','long_travel@box.ru','+79663227225','7 лет','Довольные клиенты,счастливые инвесторы и богатеющие агрегаторы'),(2,'Travel.Blog','travel-box@gmail.com','+79667117110','6 месяцев','Молодой стартап,используем рекомендательные системы для лучшего подбора отдыха и помогаем жить,а не существовать');
+/*!40000 ALTER TABLE `company` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `user_info`
 --
 
@@ -77,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-09 22:53:52
+-- Dump completed on 2020-11-12 21:46:25

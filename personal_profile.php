@@ -29,7 +29,7 @@ else {
 		<ul>
 			<li><a href="list_tickets.php">Список билетов</a><li>
 			<li><a href="price_tickets.php">Цена билетов</a><li>
-			<li><a href="#">Список компаний</a><li>
+			<li><a href="list_company.php">Список компаний</a><li>
 			<li><a href="#">Журнал продаж билетов</a><li>
 			<li><a href="exit.php">Выйти</a><li>
 		</ul>

@@ -5,6 +5,7 @@ html, body{
 }
 .container
 {
+
 	margin-top:8%;
 }
 
@@ -19,16 +20,16 @@ content label, content input
 
 
 body{
-width:100%;
-height: 100vh;
-background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url(../images/fly.jpg);
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+	width:100%;
+	height: 100vh;
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url(../images/fly.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-display: table;
+	display: table;
 
-font-family: Montserrat;
+	font-family: Montserrat;
 }
 
 
@@ -39,7 +40,7 @@ font-family: Montserrat;
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 80px;  
+	height: 80px;
 	border-bottom: 1px solid rgba(255,255,255,0.8)
 }
 
@@ -63,10 +64,10 @@ font-family: Montserrat;
 	color: white;
 }
 .menu ul{
-	list-style:none;			
+	list-style:none;
 }
 .menu ul li{
-	display: inline-block;		
+	display: inline-block;
 }
 
 .menu ul li a{
@@ -119,8 +120,9 @@ ul li:nth-child(11) a {
 	padding: 18px 38px;
 	border: none;
 	font-size: 14px;
-	margin-top: 40px;
+	margin-top: 40 px;
 }
+
 .row {
 	color: #000;
 }
@@ -141,9 +143,9 @@ ul li:nth-child(11) a {
 }
 
 .header-text__title{
-font-size: 48px;
-font-weight: 700;
-margin-bottom: 15px;
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 15px;
 }
 
 .header__view{
@@ -153,16 +155,16 @@ margin-bottom: 15px;
 	color: #fff;
 	font-size: 20px;
 	margin-right:20px;
-	
+
 }
 
 .col-1-2 {
-  width: 50%;
-  float: left;
+	width: 50%;
+	float: left;
 }
 .row{
 	margin-top:40px;
-	
+
 }
 
 .footer{
@@ -170,27 +172,26 @@ margin-bottom: 15px;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-    background: #f8f9fa;
+	background: #f8f9fa;
 	flex: 0 0 auto;
 	height: 50px;
-    position: fixed;
+	position: fixed;
 
 }
 
+// для формы
 
-/* для формы  */
- 
 
-.container
-{
-	position: absolute;
-	top: 50%;
-	left: 60%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	list-style:none; display: inline-block;
+   .container
+   {
+	   position: absolute;
+	   top: 50%;
+	   left: 60%;
+	   transform: translate(-50%, -50%);
+	   text-align: center;
+	   list-style:none; display: inline-block;
 
-}
+   }
 .container h3
 {
 	color:#fff;
@@ -199,7 +200,7 @@ content button
 {
 	width: 15%;
 	padding: 10px;]
-	background:#fff ;
+background:#fff ;
 	margin-top: 10px;
 	border: 2px solid #4CAF50;
 	margin-left:42%;
@@ -216,7 +217,7 @@ content button:hover{
 	margin-left: 20px;
 	margin-top: 100px;
 	border-spacing: 0;
-  padding: 0 2em 3em 0; 
+	padding: 0 2em 3em 0;
 }
 .table_block
 {
@@ -225,7 +226,7 @@ content button:hover{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	list-style:none;
-	 display: inline-block;
+	display: inline-block;
 }
 
 .lk
@@ -238,19 +239,19 @@ content button:hover{
 }
 
 .demotable td {
-  position: relative;
-  
+	position: relative;
+
 }
 .demotable td:nth-child(2) {
-  left: 1em;
+	left: 1em;
 }
 .demotable td:nth-child(3) {
-  left: 1em;  /* каждая дополнительная ячейка сдвигается на +1 единицу */ 
+	left: 1em;  /* каждая дополнительная ячейка сдвигается на +1 единицу */
 }
 .demotable td:nth-child(4) {
-  left: 1em;  /* каждая дополнительная ячейка сдвигается на +1 единицу */ 
+	left: 1em;  /* каждая дополнительная ячейка сдвигается на +1 единицу */
 }
 .demotable td:nth-child(5) {
-  left: 1em;  /* каждая дополнительная ячейка сдвигается на +1 единицу */ 
+	left: 1em;  /* каждая дополнительная ячейка сдвигается на +1 единицу */
 }
 

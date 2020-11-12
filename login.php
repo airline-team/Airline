@@ -7,19 +7,19 @@
 <body>
 	<div class="wrapper">
     <?php include_once 'navbar.php'; ?>
-<div class="container">
-<content>
-	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-		<label for="username"><h3>Логин:</h3></label>
-		<input type="text" name="username">
-		<br>
-		<label for="password"><h3>Пароль:</h3></label>
-		<input type="password" name="password">
-		<br>
-		<button type="submit" name="submit"><h4>Вход</h4></button>
-	</form>
-</content>
-</div>
+        <div class="container">
+            <content>
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                    <label for="username"><h3>Логин:</h3></label>
+		            <input type="text" name="username">
+		            <br>
+		            <label for="password"><h3>Пароль:</h3></label>
+		            <input type="password" name="password">
+		            <br>
+		            <button type="submit" name="submit"><h4>Вход</h4></button>
+	            </form>
+            </content>
+        </div>
     <?php include_once 'footer.php'; ?>
 </body>
 </html>

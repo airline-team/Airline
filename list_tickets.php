@@ -114,6 +114,12 @@ session_start();
                     </div>
                 </div>
             </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
     <?php include_once 'footer.php'; ?>
+    </div>
 </body>
 </html>

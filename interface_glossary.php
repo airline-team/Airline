@@ -13,11 +13,11 @@ session_start();
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
         <title>Glossary</title>
-        <?php include_once 'header.php'; ?>
+        <?php require_once 'header.php'; ?>
 </head>
 <body>
     <div class="wrapper">
-        <?php include_once 'navbar.php'; ?>
+        <?php require_once 'navbar.php'; ?>
         <div style="text-align: center">
             <br>
             <br>
@@ -51,7 +51,7 @@ session_start();
             ?>
         </div>
     </div>
-        <?php include_once 'footer.php'; ?>
+        <?php require_once 'footer.php'; ?>
         <script src="mainer.js"></script>
 </body>
 </html>

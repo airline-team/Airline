@@ -5,14 +5,14 @@ session_start();
 <html lang="en">
 <head>
     <title>Add company</title>
-    <?php include_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
 </head>
 <body>
 <div class="wrapper">
-    <?php include_once 'navbar.php'; ?>
+    <?php require_once 'navbar.php'; ?>
 
     <div class="container">
-        <form action="add_company.php" id="form_company" name="form_company" onsubmit="return validate()" method="POST">
+        <form action="add_company.php" method="post" id="form_company" name="form_company" onsubmit="return validate()">
             <div class="form-group">
                 <label style="color: white">Название компании:</label>
                 <input type="text" id="company_name" name="company_name" class="form-control" placeholder="Путешествуй в РФ">
@@ -39,7 +39,7 @@ session_start();
     <br>
     <br>
     <br>
-    <?php include_once 'footer.php'; ?>
+    <?php require_once 'footer.php'; ?>
     <script src="validation.js"></script>
 </body>
 </html>

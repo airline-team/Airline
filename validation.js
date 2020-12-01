@@ -1,6 +1,6 @@
 function validate() {
     let company_name = document.forms["form_company"]["company_name"].value;
-    let name_length = company_name.match(/[^\s]/g).length;
+    let name_length = company_name.match(/[^\s]/g) != null ? company_name.match(/[^\s]/g).length : 0;
     if (name_length < 3) {
         alert("Название компании должно быть больше 2 символов");
         return false;
@@ -21,13 +21,13 @@ function validate() {
     }
 
     let company_age = document.forms["form_company"]["company_age"].value;
-    let age_length = company_age.match(/[^\s]/g).length;
+    let age_length = company_age.match(/[^\s]/g) != null ? company_age.match(/[^\s]/g).length : 0;
     if (age_length < 4) {
         alert("Укажите возраст в приведенном формате");
         return false;
     }
     let company_info = document.forms["form_company"]["company_info"].value;
-    let info_length = company_info.match(/[^\s]/g).length;
+    let info_length = company_info.match(/[^\s]/g) != null ? company_info.match(/[^\s]/g).length : 0;
     if (info_length < 5 || info_length > 100) {
         alert("Поле информации: минимальное количество символов,не считая пробела, 5, максимальное 100");
         return false;

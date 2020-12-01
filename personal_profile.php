@@ -1,12 +1,10 @@
 <?php
-session_start();
+require_once 'constants.php';
 if(empty($_SESSION['username'])){
 	$home_url = 'http://' . $_SERVER['HTTP_HOST'];
 	header("Location: " . $home_url . '/login.php');
 }
 else {
-	include 'constants.php';
-	$dbc = mysqli_connect($host, $username_db, $password_db, $db_name);
 	$user_id = (int)$_SESSION['user_id'];
 	$sql = "SELECT * FROM `user_info` WHERE `user_id` = '$user_id'";
 	$result = $dbc -> query($sql);
@@ -17,7 +15,7 @@ else {
 <html lang="en">
 <head>
 	<title>Personal Info</title>
-    <?php include_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
 </head>
 <body>
 	<div class="wrapper">
@@ -63,6 +61,6 @@ else {
 		</tbody>
 		</table>
 	</div>
-    <?php include_once 'footer.php'; ?>
+    <?php require_once 'footer.php'; ?>
 </body>
 </html>

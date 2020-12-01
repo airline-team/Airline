@@ -1,7 +1,5 @@
 <?php
-session_start();
-include 'constants.php';
-$dbc = mysqli_connect($host, $username_db, $password_db, $db_name);
+require_once 'constants.php';
 $sql = "SELECT * FROM `company`";
 $result = $dbc -> query($sql);
 ?>
@@ -9,11 +7,11 @@ $result = $dbc -> query($sql);
 <html lang="en">
 <head>
     <title>List Company</title>
-    <?php include_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
 </head>
 <body>
 <div class="wrapper">
-    <?php include_once 'navbar.php'; ?>
+    <?php require_once 'navbar.php'; ?>
     <div class="content">
         <div class="container">
             <div class="row">
@@ -55,7 +53,7 @@ $result = $dbc -> query($sql);
         <br>
         <br>
     </div>
-    <?php include_once 'footer.php'; ?>
+    <?php require_once 'footer.php'; ?>
 </div>
 </body>
 </html>

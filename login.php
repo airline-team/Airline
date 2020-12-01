@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<title>Login</title>
-    <?php include_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
 </head>
 <body>
 	<div class="wrapper">
-    <?php include_once 'navbar.php'; ?>
+    <?php require_once 'navbar.php'; ?>
         <div class="container">
             <content>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -20,15 +20,13 @@
 	            </form>
             </content>
         </div>
-    <?php include_once 'footer.php'; ?>
+    <?php require_once 'footer.php'; ?>
 </body>
 </html>
 
 <?php
-session_start();
+require_once 'constants.php';
 if(empty($_SESSION['username'])){
-include 'constants.php';
-$dbc = mysqli_connect($host, $username_db, $password_db, $db_name);
 if(!isset($_SESSION['user_id'])) {
 	if(isset($_POST['submit'])) {
 		$user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));

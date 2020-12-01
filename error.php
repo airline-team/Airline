@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>Error</title>
-    <?php include_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
 </head>
 <body>
 	<div class="wrapper">
@@ -27,6 +27,6 @@
 </content>
 </div>
 
-    <?php include_once 'footer.php'; ?>
+    <?php require_once 'footer.php'; ?>
 </body>
 </html>

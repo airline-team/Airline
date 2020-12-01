@@ -5,11 +5,11 @@ session_start();
 <html lang="en">
 <head>
 	<title>List Tickets</title>
-    <?php include_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
 </head>
 <body>
 	<div class="wrapper">
-    <?php include_once 'navbar.php'; ?>
+    <?php require_once 'navbar.php'; ?>
     <div class="content">
         <div class="container">
             <div class="row">
@@ -119,7 +119,7 @@ session_start();
         <br>
         <br>
     </div>
-    <?php include_once 'footer.php'; ?>
+    <?php require_once 'footer.php'; ?>
     </div>
 </body>
 </html>

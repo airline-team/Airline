@@ -5,11 +5,11 @@ session_start();
 <html lang="en">
 <head>
         <title>Glossary Parameters</title>
-        <?php include_once 'header.php'; ?>
+        <?php require_once 'header.php'; ?>
 </head>
 <body>
     <div class="wrapper">
-        <?php include_once 'navbar.php'; ?>
+        <?php require_once 'navbar.php'; ?>
 
         <div class="header">
             <form class="form" action="search_word_glossary.php" method="POST">
@@ -26,6 +26,6 @@ session_start();
         </div>
 
 
-        <?php include_once 'footer.php'; ?>
+        <?php require_once 'footer.php'; ?>
 </body>
 </html>

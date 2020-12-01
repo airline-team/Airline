@@ -1,6 +1,5 @@
 <?php
-include 'constants.php';
-$dbc = mysqli_connect($host, $username_db, $password_db, $db_name);
+require_once 'constants.php';
 if(isset($_POST['submit'])) {
     $company_name = mysqli_real_escape_string($dbc, trim($_POST['company_name']));
     $company_email = mysqli_real_escape_string($dbc, trim($_POST['company_email']));
@@ -14,12 +13,8 @@ if(isset($_POST['submit'])) {
         $data = mysqli_query($dbc, $query);
 
         if(mysqli_num_rows($data) == 0) {
-            $sql = "SELECT * FROM `company`";
-            $result = $dbc -> query($sql);
-            $company_id = mysqli_num_rows($result);
-
-            $query ="INSERT INTO `company` (company_id,company_name, company_email,company_phone,company_age,company_info) 
-                     VALUES ($company_id,'$company_name','$company_email','$company_phone','$company_age','$company_info')";
+            $query ="INSERT INTO `company` (company_name, company_email,company_phone,company_age,company_info) 
+                     VALUES ('$company_name','$company_email','$company_phone','$company_age','$company_info')";
             mysqli_query($dbc,$query);
             $home_url = 'http://' . $_SERVER['HTTP_HOST'];
             header("Location: " . $home_url . '/list_company.php');

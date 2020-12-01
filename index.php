@@ -5,11 +5,11 @@ session_start();
 <html lang="en">
 <head>
     <title>Airline VolSU</title>
-    <?php include_once 'header.php'; ?>
+    <?php require_once 'header.php'; ?>
 </head>
 <body>
 	<div class="wrapper">
-	<?php include_once 'navbar.php'; ?>
+	<?php require_once 'navbar.php'; ?>
 
         <div class="header">
             <h1> Покупка авиабилетов </h1>
@@ -17,6 +17,6 @@ session_start();
             <button type="button">Поиск билетов</button>
         </div>
 	
-	<?php include_once 'footer.php'; ?>
+	<?php require_once 'footer.php'; ?>
 </body>
 </html>

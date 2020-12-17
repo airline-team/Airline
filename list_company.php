@@ -17,6 +17,7 @@ $result = $dbc -> query($sql);
             <div class="row">
                 <?php
                 foreach ($result as $item){
+                    $company_id = $item['company_id'];
                     $company_name = $item['company_name'];
                     $company_email = $item['company_email'];
                     $company_phone = $item['company_phone'];
@@ -34,6 +35,24 @@ $result = $dbc -> query($sql);
                                     <li class=\"list-group-item\">Номер: $company_phone</li>
                                     <li class=\"list-group-item\">Сколько лет на рынке: $company_age</li>
                                 </ul>
+                                <div class=\"card-footer\">
+                                    <form action=\"list_company_service.php\" method=\"post\">
+                                        <a href=\"#\" onclick=\"parentNode.submit();\">Посмотреть услуги компании</a>
+                                        <input type=\"hidden\" name=\"look\" value=\"$company_id\"/>
+                                    </form>
+                                </div>
+                                <div class=\"card-footer\">
+                                    <form action=\"form_company.php\" method=\"post\">
+                                        <a href=\"#\" onclick=\"parentNode.submit();\">Редактировать</a>
+                                        <input type=\"hidden\" name=\"edit\" value=\"$company_id\"/>
+                                    </form>
+                                </div>
+                                <div class=\"card-footer\">
+                                    <form action=\"sql/crud_company.php\" method=\"post\">
+                                        <a href=\"#\" onclick=\"parentNode.submit();\">Удалить</a>
+                                        <input type=\"hidden\" name=\"delete\" value=\"$company_id\"/>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                         ");

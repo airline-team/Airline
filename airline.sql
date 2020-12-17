@@ -30,7 +30,7 @@ CREATE TABLE `company` (
   `company_age` text NOT NULL,
   `company_info` mediumtext NOT NULL,
   PRIMARY KEY (`company_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,8 +39,35 @@ CREATE TABLE `company` (
 
 LOCK TABLES `company` WRITE;
 /*!40000 ALTER TABLE `company` DISABLE KEYS */;
-INSERT INTO `company` VALUES (1,'ООО \"Максимус\"','maxim-maximov@yandex.ru','+79667447110','2 года','Долголетие,100 тысяч довольных клиентов и непревзойденный сервис'),(2,'ООО \"Дальний полет\"','long_travel@box.ru','+79663227225','7 лет','Довольные клиенты, счастливые инвесторы и богатеющие агрегаторы'),(3,'Travel.Blog','travel-box@gmail.com','+79667117110','6 месяцев','Молодой стартап, используем рекомендательные системы для лучшего подбора отдыха и помогаем жить, а не существовать');
+INSERT INTO `company` VALUES (1,'ООО Максимус','maxim-maximov@yandex.ru','+79667447110','2 года','Долголетие,100 тысяч довольных клиентов и непревзойденный сервис'),(2,'ООО Дальний полет','long_travel@box.ru','+79663227225','7 лет','Довольные клиенты, счастливые инвесторы и богатеющие агрегаторы'),(3,'Travel.Blog','travel-box@gmail.com','+79667117110','8 месяцев','Молодой стартап, используем рекомендательные системы для лучшего подбора отдыха и помогаем жить, а не существовать');
 /*!40000 ALTER TABLE `company` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `company_service`
+--
+
+DROP TABLE IF EXISTS `company_service`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `company_service` (
+  `service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `company_id` int(11) NOT NULL,
+  `service_name` text NOT NULL,
+  `service_info` text NOT NULL,
+  `service_picture` text NOT NULL,
+  PRIMARY KEY (`service_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `company_service`
+--
+
+LOCK TABLES `company_service` WRITE;
+/*!40000 ALTER TABLE `company_service` DISABLE KEYS */;
+INSERT INTO `company_service` VALUES (4,2,'Отдых на Мальдивах - горячая путевка','Только сейчас и только у нас самые выгодные билеты на зиму!!!','winter.jpeg'),(5,1,'Страхование','В отпуск нельзя ездить без неё,наша компании поможет вам в случае чего !','sddefault.jpeg'),(6,3,'Покори гори - пока не поздно!','Представляем вам лучший горнолыжный курорт с лучшими ценами и превосходным сервисом','dombai.jpeg');
+/*!40000 ALTER TABLE `company_service` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -105,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-02  1:08:31
+-- Dump completed on 2020-12-17 19:52:25

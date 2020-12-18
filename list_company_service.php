@@ -1,8 +1,7 @@
 <?php
 require_once 'constants.php';
 if(isset($_POST['look'])){
-    $company_id = mysqli_real_escape_string($dbc, $_POST['look']);
-    $company_id = intval($company_id);
+    $company_id = intval(trim($_POST['look']));
     $sql = "SELECT * FROM `company_service` WHERE `company_id`=$company_id";
     $result = $dbc -> query($sql);
 }else {

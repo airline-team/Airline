@@ -3,8 +3,7 @@ require_once 'constants.php';
 if(isset($_POST['edit'])){
     $button_type = "edit";
     $button_name = "Обновить";
-    $company_id = mysqli_real_escape_string($dbc, $_POST['edit']);
-    $company_id = intval($company_id);
+    $company_id = intval(trim($_POST['edit']));
     $sql = "SELECT * FROM `company` WHERE `company_id` = $company_id";
     $result = $dbc -> query($sql);
     $result = mysqli_fetch_array($result);

@@ -34,7 +34,6 @@ if(!empty($_FILES["service_picture"])){
 
     $service_picture_name = $name;
 }
-$company_id = mysqli_real_escape_string($dbc, trim($_POST['company_id']));
-$company_id = intval($company_id);
+$company_id = intval(trim($_POST['company_id']));
 $service_name = mysqli_real_escape_string($dbc, trim($_POST['service_name']));
 $service_info = mysqli_real_escape_string($dbc, trim($_POST['service_info']));

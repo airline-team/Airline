@@ -24,8 +24,7 @@ if(isset($_POST['submit'])) {
     }
 }
 elseif (isset($_POST['edit'])){
-    $company_id = mysqli_real_escape_string($dbc, trim($_POST['company_id']));
-    $company_id = intval($company_id);
+    $company_id = intval(trim($_POST['company_id']));
     require_once '../function/duplicate_company.php';
 
     if(!empty($company_name) && !empty($company_email) && !empty($company_phone) && !empty($company_age) && !empty($company_info) && !empty($company_id)) {
@@ -40,9 +39,7 @@ elseif (isset($_POST['edit'])){
     }
 }
 elseif (isset($_POST['delete'])){
-    $company_id = mysqli_real_escape_string($dbc, trim($_POST['delete']));
-    $company_id = intval($company_id);
-
+    $company_id = intval(trim($_POST['delete']));
     $query = "SELECT * FROM `company_service` WHERE company_id = '$company_id'";
     $data = mysqli_query($dbc, $query);
 

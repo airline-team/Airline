@@ -25,8 +25,7 @@ if(isset($_POST['submit'])) {
 }
 elseif (isset($_POST['edit'])){
     require_once '../function/upload_picture.php';
-    $service_id = mysqli_real_escape_string($dbc, trim($_POST['service_id']));
-    $service_id = intval($service_id);
+    $service_id = intval(trim($_POST['service_id']));
     $old_picture = mysqli_real_escape_string($dbc, trim($_POST['old_picture']));
 
     if(!empty($company_id) && !empty($service_id) && !empty($service_name) && !empty($service_info)) {
@@ -42,8 +41,7 @@ elseif (isset($_POST['edit'])){
     }
 }
 elseif (isset($_POST['delete'])){
-    $service_id = mysqli_real_escape_string($dbc, trim($_POST['delete']));
-    $service_id = intval($service_id);
+    $service_id = intval(trim($_POST['delete']));
     $sql = "SELECT * FROM `company_service` WHERE `service_id` = $service_id";
     $result = $dbc -> query($sql);
     $result = mysqli_fetch_array($result);

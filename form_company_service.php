@@ -3,8 +3,7 @@ require_once 'constants.php';
 if(isset($_POST['edit'])){
     $button_type = "edit";
     $button_name = "Обновить";
-    $service_id = mysqli_real_escape_string($dbc, $_POST['edit']);
-    $service_id = intval($service_id);
+    $service_id = intval(trim($_POST['edit']));
     $sql = "SELECT * FROM `company_service` WHERE `service_id` = $service_id";
     $result = $dbc -> query($sql);
     $result = mysqli_fetch_array($result);
@@ -13,8 +12,7 @@ if(isset($_POST['edit'])){
     $service_picture = $result['service_picture'];
     $service_info = $result['service_info'];
 }else{
-    $company_id = mysqli_real_escape_string($dbc, $_POST['company_id']);
-    $company_id = intval($company_id);
+    $company_id = intval(trim($_POST['company_id']));
     $button_type = "submit";
     $button_name = "Создать";
 }
